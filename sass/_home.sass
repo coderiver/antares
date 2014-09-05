@@ -1,0 +1,497 @@
+html
+	font-size: 62.5%
+//My Mixins
+	//fonts
++font("Cuprum Regular", cuprum-regular-webfont)
+
+
+
+=cr
+	font-family: "Cuprum Regular", Arial, sans-serif
+=arial
+	font-family: Arial, sans-serif
+
+//ALL
+a
+	&:hover
+		text-decoration: none
+
+strong
+	font-weight: bold
+button
+	&:active
+		position: relative
+		top: 1px
+=ttu
+	text-transform: uppercase
+
+//HOME PAGE
+.home-bg
+	background: url(../img/home-bg.jpg) no-repeat top center
+	background-color: #003d52
+.home
+	max-width: 1900px
+.all-wrapper
+	max-width: 1190px
+	padding: 20px 5px
+	margin: 0 auto
+	height: 910px
+.header
+	+clr
+	width: 100%
+	color: white
+	line-height: 24px
+	text-align: right
+	a
+		color: white
+	.logo
+		float: left
+		margin-left: 8%
+		+s(logo)
+		display: block
+.header__right
+	padding-top: 16px
+	.phone
+		+cr
+		+fs(24)
+	.tomap
+		+arial
+		+fs(14)
+		margin-left: 20px
+.nav
+	width: 98.5%
+	margin-top: 40px
+	margin-right: 1.5%
+	li
+		display: inline-block
+		+fs(0)
+		margin-right: 5%
+		a
+			+fs(18)
+			+cr
+			position: relative
+			padding-left: 28px
+			text-decoration: none
+			&:before
+				display: block
+				content: ""
+				position: absolute
+				left: 0px
+				top: 0px
+			&:hover
+				text-decoration: underline
+		.w-key
+			&:before
+				+s(key)
+				top: 1px
+		.w-office
+			&:before
+				+s(office)
+		.w-newspaper
+			&:before
+				+s(newspaper)
+				top: 5px
+		.w-bubbles
+			&:before
+				+s(bubbles)
+				top: 4px
+	
+	//CONTAINER
+.container
+	width: 100%
+	+clr
+	margin-top: 20px
+	position: relative
+	height: 600px
+.box
+	text-decoration: none
+	position: absolute
+	overflow: hidden
+	.box__heading
+		+cr
+		+fs(22)
+		line-height: 24px
+		color: white
+		//BOX-B
+.box__b
+	p
+		+arial
+		+fs(14)
+		line-height: 18px
+		color: white
+		margin: 10px 0px
+	a
+		+fs(14)
+		color: #1e77af
+.box__b-f
+	padding: 35px 23px 25px 17px
+	display: block
+	width: 350px
+	height: 130px
+	color: white
+	top: 0px
+	left: 0px
+	background: url(../img/box-b.png)
+	img
+		float: left
+		margin-right: 24px
+	.box__info
+		width: 160px
+		float: left
+		button
+			+fs(12)
+			+arial
+			line-height: 24px
+			+ttu
+			color: white
+			background: none
+			border: 1px solid #acbabe
+			border-radius: 2px
+			height: 28px
+			width: 130px
+			strong
+				+fs(14)
+				margin-left: 7px
+.box__b-s
+	top: 201px
+	left: 0px
+	background: #999999
+	width: 390px
+	height: 190px
+	background: url(../img/box-b.png)
+	.box__info
+		width: 50%
+		float: left
+		text-align: right
+		display: inline-block
+		vertical-align: middle
+		p
+			margin: 38px 15px 0px 15px
+	.box__video
+		width: 50%
+		float: right
+.box__b-t
+	top: 400px
+	left: 0px
+	background: white
+	width: 390px
+	height: 190px
+	img
+		float: left
+		width: 50%
+	.box__info
+		padding: 33px 0px 0px 0px
+		float: left
+		color: black
+		width: 50%
+		span
+			width: 100%
+			display: block
+			padding-bottom: 10px
+			padding-left: 15px
+		.box__heading
+			color: black
+		.box__phone
+			+cr
+			+fs(24)
+			line-height: 24px
+		a
+			margin-left: 15px
+		p
+			color: black
+			margin: 7px 0px
+			margin-left: 15px
+			i
+				+s(box__phone)
+				display: block
+				content: ""
+				margin-right: 7px
+				float: left
+		//BOX-H
+.box__h
+	width: 190px
+	height: 391px
+	.box__heading
+		position: absolute
+		top: 0px
+		left: 0px
+		width: 100%
+		text-align: center
+		padding-top: 15px
+		background: url(../img/box__h-text.png) repeat-x
+		display: block
+		content: ""
+		min-height: 147px
+		+ttu
+.box__h-f
+	top: 0px
+	left: 400px
+	background: url(../img/box__h-f.jpg) no-repeat 63% 50%
+.box__h-s
+	top: 0px
+	left: 600px
+	background: url(../img/box__h-s.jpg) no-repeat 16% 50%
+.box__h-t
+	top: 0px
+	left: 800px
+	background: url(../img/box__h-t.jpg) no-repeat 50% 50%
+		//BOX-S
+.box__s
+	width: 190px
+	height: 190px
+.box__s-f
+	top: 0px
+	left: 1000px
+	background: url(../img/box__s-f.jpg)
+	.box__heading
+		position: absolute
+		bottom: 0px
+		left: 0px
+		padding-bottom: 15px
+		width: 100%
+		text-align: center
+		display: block
+		content: ""
+		+ttu
+.box__s-s
+	top: 400px
+	left: 400px
+	background: url(../img/box__s-s.jpg)
+	.box__heading
+		position: absolute
+		top: 30px
+		left: 12px
+		width: 100px
+.box__s-t
+	top: 400px
+	left: 600px
+	background: url(../img/box__s-t.jpg)
+	.box__heading
+		position: absolute
+		bottom: 0px
+		left: 0px
+		padding-bottom: 15px
+		width: 100%
+		text-align: center
+		display: block
+		content: ""
+		+ttu
+.box__s-fo
+	top: 400px
+	left: 800px
+	background: url(../img/box__s-fo.jpg)
+	.box__heading
+		position: absolute
+		bottom: 0px
+		left: 0px
+		padding-bottom: 15px
+		width: 100%
+		text-align: center
+		display: block
+		content: ""
+		+ttu
+
+//ENTER
+.box__h-fo
+	top: 200px
+	left: 1000px
+	background: url(../img/box-b.png)
+	padding: 0px 14px
+	width: 162px
+	text-align: center
+	.login__heading
+		+cr
+		+fs(22)
+		line-height: 24px
+		color: white
+		margin: 0 auto
+		margin-top: 40px
+		display: block
+		+ttu
+		width: 50%
+		margin-bottom: 25px
+	input
+		background: white
+		border: none
+		width: 100%
+		margin-top: 5px
+		border-top: solid 1px #acadad
+		border-bottom: solid 1px #acadad
+		padding: 8px 15px 7px 36px
+		+box
+		+arial
+		+fs(14)
+		color: black
+		text-align: left
+		+placeholder-color(black)
+	.box__login
+		background: url(../img/login.png) no-repeat 9% 50% white
+	.box__password
+		background: url(../img/password.png) no-repeat 9% 50% white
+	.box__submit
+		background: #DE1840
+		border: none
+		color: white
+		+ttu
+		+cr
+		+fs(18)
+		padding: 11px 0px
+		margin-top: 10px
+		margin-bottom: 35px
+		text-align: center
+		&:hover
+			opacity: 0.9
+		&:active
+			margin-top: 11px
+			margin-bottom: 34px
+	a
+		color: white
+		text-decoration: underline
+		+fs(14)
+		+arial
+		line-height: 24px
+		&:hover
+			text-decoration: none
+			
+
+//FOOTER
+.footer
+	padding-top: 15px
+	color: white
+	+fs(14)
+	+arial
+	line-height: 18px
+	a
+		color: white
+		&:hover
+			text-decoration: none
+	p
+		text-align: center
+		width: 87%
+		display: block
+		margin: 0 auto
+		padding-bottom: 15px
+	span
+		line-height: 24px
+	.footer__left
+		float: left
+	.footer__right
+		float: right
+		
+
+//RESIZE
+
+=r($width)
+	@media only screen and (max-width: $width+'px')
+		@content
+
+
++r(1200)
+	.home-bg
+		background: url(../img/home-bg-r.jpg) no-repeat top center
+	.all-wrapper
+		width: 790px
+		height: 1181px
+	.header
+		color: black
+		a
+			color: #1980bd
+		.logo
+			+s(logo-red)
+			margin-left: 20px
+	
+	.header__right
+		padding-top: 10px
+		.phone
+			+cr
+			+fs(24)
+		.tomap
+			+arial
+			+fs(14)
+			margin-left: 20px
+	.nav
+		width: 100%
+		margin-top: 40px
+		margin-right: 0px
+		li
+			display: inline-block
+			+fs(0)
+			margin-right: 20px
+			a
+				color: black
+			.w-key
+				&:before
+					+s(key-red)
+					top: 1px
+			.w-office
+				&:before
+					+s(office-red)
+			.w-newspaper
+				&:before
+					+s(newspaper-red)
+					top: 5px
+			.w-bubbles
+				&:before
+					+s(bubbles-red)
+					top: 4px
+		.is-last
+			margin-right: 0px
+
+	.container
+		height: 990px
+	.box__h-f
+		width: 390px
+		height: 190px
+		background: url(../img/box__h-f.jpg) no-repeat center center
+		background-size: cover
+	.box__h-s
+		width: 390px
+		height: 190px
+		top: 200px
+		left: 400px
+		background: url(../img/box__h-s.jpg) no-repeat center center
+		background-size: cover
+	.box__h-t
+		width: 390px
+		height: 190px
+		top: 400px
+		left: 400px
+		background: url(../img/box__h-t.jpg) no-repeat center center
+		background-size: cover
+	.box__s-s
+		top: 600px
+		left: 0px
+		background: url(../img/box__s-s.png)
+	.box__s-t
+		top: 600px
+		left: 200px
+		background: url(../img/box__s-t.png)
+	.box__s-f
+		top: 800px
+		left: 0px
+		background: url(../img/box__s-f.png)
+	.box__s-fo
+		top: 800px
+		left: 200px
+		background: url(../img/box__s-fo.png)
+	.box__h-fo
+		top: 600px
+		left: 400px
+		width: 247px
+		height: 319px
+		padding: 31px 71px 40px 72px
+		.login__heading
+			width: 100%
+	.footer
+		color: black
+		padding-top: 40px
+		a
+			color: #1980bd
+		p
+			display: none
+		span
+			width: 390px
+		.footer__left
+			text-align: right
+		.footer__right
+			text-align: left
