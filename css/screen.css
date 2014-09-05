@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
 
 body, html { height: 100%; }
@@ -18,9 +19,79 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
+@font-face { font-family: "Cuprum-Regular"; src: url("fonts/Cuprum-Regular.eot"); src: url("fonts/Cuprum-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/Cuprum-Regular.woff") format("woff"), url("fonts/Cuprum-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "Cuprum-Bold"; src: url("fonts/Cuprum-Bold.eot"); src: url("fonts/Cuprum-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/Cuprum-Bold.woff") format("woff"), url("fonts/Cuprum-Bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+html { font-size: 62.5%; }
 
-.l { *zoom: 1; }
+body { font-family: Arial, sans-serif; font-family: "Cuprum-Regular"; font-weight: normal; font-size: 18px; font-size: 1.8rem; line-height: 1.3333; }
+
+.l { max-width: 1190px; margin: auto; *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
+
+.wallpaper { background: #235d6b url("../img/wallpaper.jpg") 50% 0 no-repeat; color: #FFF; }
+
+.header { position: relative; padding: 46px 0 35px; text-align: right; }
+.header:after { content: ""; position: absolute; bottom: 0; left: -1000px; right: -1000px; height: 2px; background-color: rgba(255, 255, 255, 0.2); }
+.header a { color: #FFF; text-decoration: none; }
+.header a:hover { text-decoration: underline; }
+.header__contacts .tel { margin-right: 20px; text-decoration: none; }
+.header__nav { font-size: 0; margin-top: 18px; }
+.header__nav li { display: inline-block; vertical-align: middle; margin-right: 50px; }
+.header__nav li:last-child { margin-right: 0; }
+.header__nav a { font-size: 18px; font-size: 1.8rem; }
+.header .logo { position: absolute; top: 13px; left: 7px; }
+
+.logo { display: inline-block; text-decoration: none; font: 0/0 a; text-shadow: none; color: transparent; background: url('../img/icons-s9bac7d6943.png') 0 -30px no-repeat; width: 184px; height: 114px; }
+
+.tel { display: inline-block; color: #FFF; font-size: 24px; font-size: 2.4rem; text-decoration: none; }
+
+.breadcrumbs { position: relative; font-size: 0; margin: 20px 0 18px; }
+.breadcrumbs:before { display: none; content: "←"; position: absolute; font-size: 15px; font-size: 1.5rem; color: #FFF; top: 0px; left: -19px; }
+.breadcrumbs:hover:before { display: block; }
+.breadcrumbs li { display: inline-block; vertical-align: middle; font-size: 15px; font-size: 1.5rem; }
+.breadcrumbs li:after { content: "/"; display: inline; color: #FFF; margin: 7px; }
+.breadcrumbs li:last-child:after { display: none; }
+.breadcrumbs li a { color: #FFF; text-decoration: none; }
+.breadcrumbs li a:hover { text-decoration: underline; }
+
+.content { position: relative; margin: -5px; *zoom: 1; }
+.content:after { content: " "; display: table; clear: both; }
+
+.b { position: relative; padding: 20px; margin: 5px; background-color: rgba(0, 0, 0, 0.4); -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; overflow: hidden; float: left; }
+.b a { color: #FFF; text-decoration: none; }
+.b a:hover { text-decoration: underline; }
+.b__text { margin: 10px 0; }
+.b__in-left { padding-right: 20px; margin-right: 42.0289855072%; }
+.b__in-right { padding-left: 20px; width: 42.0289855072%; position: absolute; top: 0; right: 0; bottom: 0; }
+.b_red { background-color: rgba(251, 35, 37, 0.5); }
+.b_green { background-image: linear-gradient(to top, rgba(0, 153, 15, 0.5) -25%, rgba(145, 195, 31, 0.5) 125%); }
+.b .tel { font-size: inherit; }
+.b .btn { position: absolute; z-index: 3; bottom: 20px; left: 20px; right: 20px; }
+
+.b-h-sm { width: 41.1764705882%; max-width: 490px; height: 235px; }
+
+.b-h-md { width: 57.9831932773%; max-width: 690px; height: 235px; }
+.b-h-md.b-h-md_higher { height: 390px; }
+
+.b-h-lg { width: 100%; max-width: 1190px; height: 345px; }
+
+.b-v { width: 24.3697478992%; max-width: 290px; height: 390px; }
+
+.b-xs { width: 15.9663865546%; max-width: 190px; height: 190px; padding: 15px; }
+
+.b-temp { position: absolute; bottom: 0; left: 300px; }
+
+.title { margin-bottom: 10px; color: #fefefe; font-family: "Cuprum-Bold"; font-weight: normal; font-size: 40px; font-size: 4rem; }
+.title_xs { font-size: 22px; font-size: 2.2rem; font-family: "Cuprum-Regular"; font-weight: normal; text-align: center; text-transform: uppercase; line-height: 1.18; }
+
+.btn { display: block; height: 40px; line-height: 40px; text-align: center; font-size: 24px; font-size: 2.4rem; text-decoration: none; background-color: rgba(0, 0, 0, 0.5); }
+.btn:hover { text-decoration: none !important; opacity: 0.9; }
+.btn_red { background-color: #DE1840; }
+
+.ico { display: block; margin: auto; position: relative; }
+.ico:before { content: ""; display: block; margin: auto; position: relative; z-index: 2; }
+.ico:after { content: ""; position: absolute; z-index: 1; top: 0; left: 50%; width: 200px; height: 100%; background-color: rgba(0, 0, 0, 0.1); -webkit-transform-origin: 0 50%; -moz-transform-origin: 0 50%; -ms-transform-origin: 0 50%; -o-transform-origin: 0 50%; transform-origin: 0 50%; -moz-transform: rotate(32deg); -ms-transform: rotate(32deg); -webkit-transform: rotate(32deg); transform: rotate(32deg); }
+.ico_partner:before { background: url('../img/icons-s9bac7d6943.png') 0 -240px no-repeat; width: 52px; height: 50px; }
+.ico_other:before { background: url('../img/icons-s9bac7d6943.png') 0 -154px no-repeat; width: 76px; height: 76px; }

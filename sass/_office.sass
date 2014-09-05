@@ -1,0 +1,458 @@
+// Normally mainpage styles
+.wallpaper
+	background: #235d6b url('../img/wallpaper.jpg') 50% 0 no-repeat
+	color: #FFF
+
+.header
+	position: relative
+	padding: 46px 0 35px
+	text-align: right
+	&:after
+		content: ""
+		position: absolute
+		bottom: 0
+		left: -1000px
+		right: -1000px
+		height: 2px
+		background-color: rgba(255,255,255,0.2)
+	a
+		color: #FFF
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+
+	&__contacts
+		.tel
+			margin-right: 20px
+			text-decoration: none
+
+
+	&__nav
+		font-size: 0
+		margin-top: 18px
+		li
+			display: inline-block
+			vertical-align: middle
+			margin-right: 50px
+			&:last-child
+				margin-right: 0
+		a
+			+fs(18)
+
+	.logo
+		position: absolute
+		top: 13px
+		left: 7px
+
+.logo
+	display: inline-block
+	text-decoration: none
+	+hide-text
+	+s(logo)
+
+.tel
+	display: inline-block
+	color: #FFF
+	+fs(24)
+	text-decoration: none
+
+.breadcrumbs
+	position: relative
+	font-size: 0
+	margin: 20px 0 18px
+	&:before
+		display: none
+		content: "←"
+		position: absolute
+		+fs(15)
+		color: #FFF
+		top: 0px
+		left: -19px
+	&:hover
+		&:before
+			display: block
+	li
+		display: inline-block
+		vertical-align: middle
+		+fs(15)
+		&:after
+			content: "/"
+			display: inline
+			color: #FFF
+			margin: 7px
+		&:last-child
+			&:after
+				display: none
+		a
+			color: #FFF
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+
+.content
+	position: relative
+	margin: -5px
+	+clr
+
+//------------------------------------------------------------------------------
+//
+//    b - block;
+//    h - horizontal;
+//    v - vertical;
+//    xs - extra small;
+//    sm - small;
+//    md - medium;
+//    lg - large;
+//
+//    example: b-h-lg
+//
+//------------------------------------------------------------------------------
+
+.b
+	position: relative
+	padding: 20px
+	margin: 5px
+	background-color: rgba(0,0,0,0.4)
+	+box
+	overflow: hidden
+	float: left
+	a
+		color: #FFF
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+
+	&__text
+		margin: 10px 0
+
+	&__in-left
+		padding-right: 20px
+		margin-right: 290/690*100%
+
+	&__in-right
+		padding-left: 20px
+		width: 290/690*100%
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+
+	&_red
+		background-color: rgba(251, 35, 37, 0.5)
+
+	&_green
+		// +g(rgba(0, 153, 15, 0.5) -25%, rgba(145, 195, 31, 0.5) 125%)
+		background-image: linear-gradient(bottom, rgba(0, 153, 15, 0.5) -25%, rgba(145, 195, 31, 0.5) 125%)
+
+	.tel
+		font-size: inherit
+
+	.btn
+		position: absolute
+		z-index: 3
+		bottom: 20px
+		left: 20px
+		right: 20px
+
+.b-h-sm
+	width: 490/1190*100%
+	max-width: 490px
+	height: 235px
+
+.b-h-md
+	width: 690/1190*100%
+	max-width: 690px
+	height: 235px
+	&.b-h-md_higher
+		height: 390px
+
+.b-h-lg
+	width: 100%
+	max-width: 1190px
+	height: 345px
+
+.b-v
+	width: 290/1190*100%
+	max-width: 290px
+	height: 390px
+
+.b-xs
+	width: 190/1190*100%
+	max-width: 190px
+	height: 190px
+	padding: 15px
+
+.b-temp
+	position: absolute
+	bottom: 0
+	left: 300px
+
+.title
+	margin-bottom: 10px
+	color: #fefefe
+	+cuprum-b
+	+fs(40)
+	&_xs
+		+fs(22)
+		+cuprum
+		text-align: center
+		text-transform: uppercase
+		line-height: 1.18
+
+.btn
+	display: block
+	height: 40px
+	line-height: 40px
+	text-align: center
+	+fs(24)
+	text-decoration: none
+	background-color: rgba(0,0,0,0.5)
+	&:hover
+		text-decoration: none !important
+		opacity: 0.9
+	&_red
+		background-color: #DE1840
+
+.ico
+	display: block
+	margin: auto
+	position: relative
+	&:before
+		content: ""
+		display: block
+		margin: auto
+		position: relative
+		z-index: 2
+	&:after
+		content: ""
+		position: absolute
+		z-index: 1
+		top: 0
+		left: 50%
+		width: 200px
+		height: 100%
+		background-color: rgba(0,0,0,0.1)
+		-webkit-transform-origin: 0 50%
+		-moz-transform-origin: 0 50%
+		-ms-transform-origin: 0 50%
+		-o-transform-origin: 0 50%
+		transform-origin: 0 50%
+		+transform(rotate(32deg))
+	&_partner:before
+		+s(partner)
+	&_other:before
+		+s(other)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
