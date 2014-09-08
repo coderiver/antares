@@ -1,13 +1,3 @@
-html
-	font-size: 62.5%
-//My Mixins
-	//fonts
-+font("Cuprum Regular", cuprum-regular-webfont)
-
-
-
-=cr
-	font-family: "Cuprum Regular", Arial, sans-serif
 =arial
 	font-family: Arial, sans-serif
 
@@ -27,16 +17,16 @@ button
 
 //HOME PAGE
 .home-bg
-	background: url(../img/home-bg.jpg) no-repeat top center
-	background-color: #003d52
-.home
-	max-width: 1900px
+	background: #003d52 url(../img/home-bg.jpg) no-repeat top center
+	-webkit-background-size: cover
+	-o-background-size: cover
+	background-size: cover
 .all-wrapper
 	max-width: 1190px
 	padding: 20px 5px
 	margin: 0 auto
-	height: 910px
-.header
+	// height: 910px
+.header-home
 	+clr
 	width: 100%
 	color: white
@@ -52,7 +42,7 @@ button
 .header__right
 	padding-top: 16px
 	.phone
-		+cr
+		+cuprum
 		+fs(24)
 	.tomap
 		+arial
@@ -68,7 +58,7 @@ button
 		margin-right: 5%
 		a
 			+fs(18)
-			+cr
+			+cuprum
 			position: relative
 			padding-left: 28px
 			text-decoration: none
@@ -95,7 +85,7 @@ button
 			&:before
 				+s(bubbles)
 				top: 4px
-	
+
 	//CONTAINER
 .container
 	width: 100%
@@ -108,7 +98,7 @@ button
 	position: absolute
 	overflow: hidden
 	.box__heading
-		+cr
+		+cuprum
 		+fs(22)
 		line-height: 24px
 		color: white
@@ -192,7 +182,7 @@ button
 		.box__heading
 			color: black
 		.box__phone
-			+cr
+			+cuprum
 			+fs(24)
 			line-height: 24px
 		a
@@ -300,7 +290,7 @@ button
 	width: 162px
 	text-align: center
 	.login__heading
-		+cr
+		+cuprum
 		+fs(22)
 		line-height: 24px
 		color: white
@@ -333,7 +323,7 @@ button
 		border: none
 		color: white
 		+ttu
-		+cr
+		+cuprum
 		+fs(18)
 		padding: 11px 0px
 		margin-top: 10px
@@ -352,7 +342,7 @@ button
 		line-height: 24px
 		&:hover
 			text-decoration: none
-			
+
 
 //FOOTER
 .footer
@@ -377,7 +367,7 @@ button
 		float: left
 	.footer__right
 		float: right
-		
+
 
 //RESIZE
 
@@ -391,7 +381,7 @@ button
 		background: url(../img/home-bg-r.jpg) no-repeat top center
 	.all-wrapper
 		width: 790px
-		height: 1181px
+		// height: 1181px
 	.header
 		color: black
 		a
@@ -399,11 +389,11 @@ button
 		.logo
 			+s(logo-red)
 			margin-left: 20px
-	
+
 	.header__right
 		padding-top: 10px
 		.phone
-			+cr
+			+cuprum
 			+fs(24)
 		.tomap
 			+arial
@@ -417,6 +407,8 @@ button
 			display: inline-block
 			+fs(0)
 			margin-right: 20px
+			&:last-child
+				margin-right: 0
 			a
 				color: black
 			.w-key
@@ -434,8 +426,6 @@ button
 				&:before
 					+s(bubbles-red)
 					top: 4px
-		.is-last
-			margin-right: 0px
 
 	.container
 		height: 990px

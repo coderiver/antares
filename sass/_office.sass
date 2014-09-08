@@ -1,20 +1,32 @@
 // Normally mainpage styles
-.wallpaper
+.office-bg
 	background: #235d6b url('../img/wallpaper.jpg') 50% 0 no-repeat
+	-webkit-background-size: cover
+	-o-background-size: cover
+	background-size: cover
 	color: #FFF
+
+//------------------------------------------------------------------------------
+//
+//    #header
+//
+//------------------------------------------------------------------------------
 
 .header
 	position: relative
-	padding: 46px 0 35px 
+	padding: 46px 0 33px
 	text-align: right
-	&:after
-		content: ""
-		position: absolute
-		bottom: 0
-		left: -1000px
-		right: -1000px
-		height: 2px
-		background-color: rgba(255,255,255,0.2)
+	border-bottom: 2px solid rgba(255,255,255,0.2)
+	+res1
+		padding: 25px 0
+	// &:before
+	// 	content: ""
+	// 	position: absolute
+	// 	bottom: 0
+	// 	left: -1000px
+	// 	right: -1000px
+	// 	height: 2px
+	// 	background-color: rgba(255,255,255,0.2)
 	a
 		color: #FFF
 		text-decoration: none
@@ -25,7 +37,12 @@
 		.tel
 			margin-right: 20px
 			text-decoration: none
-
+			+res1
+				+fs(15)
+				margin-right: 70px
+		+res1
+			a:not(.tel), span, p, div
+				display: none
 
 	&__nav
 		font-size: 0
@@ -38,17 +55,72 @@
 				margin-right: 0
 		a
 			+fs(18)
+		+res1
+			display: none
+			position: absolute
+			z-index: 100
+			top: 8px
+			left: 15px
+			right: 15px
+			margin: 0
+			text-align: right
+			li
+				display: block
+				margin: 0
+				border-bottom: 1px solid #000
+				&:last-child
+					border-bottom: none
+			a
+				display: block
+				padding: 0 20px
+				text-align: left
+				background: #FFF
+				color: #000
+				line-height: 50px
+			&:before
+				content: ""
+				display: inline-block
+				position: relative
+				top: 5px
+				width: 45px
+				height: 40px
+				background-color: #fff
 
-	.logo
+	.logo-office
 		position: absolute
-		top: 13px
-		left: 7px
+		top: -33px
+		left: 21px
+		+res1
+			top: -19px
 
-.logo
+.logo-office
 	display: inline-block
 	text-decoration: none
 	+hide-text
 	+s(logo)
+	+res1
+		+sr(logo)
+
+.menu-btn
+	display: none
+	position: absolute
+	top: -12px
+	right: 15px
+	width: 45px
+	height: 45px
+	background-color: #FFF
+	border-radius: 50%
+	cursor: pointer
+	+vertical
+	&:after
+		content: ""
+		display: inline-block
+		vertical-align: middle
+		+s(menu-btn)
+		position: relative
+		z-index: 101
+	+res1
+		display: block
 
 .tel
 	display: inline-block
@@ -58,6 +130,7 @@
 
 .breadcrumbs
 	position: relative
+	display: inline-block
 	font-size: 0
 	margin: 20px 0 18px
 	&:before
@@ -88,14 +161,60 @@
 			text-decoration: none
 			&:hover
 				text-decoration: underline
+	+res2
+		margin-left: 20px
+		&:before
+			display: block
+
+
+
+
+//------------------------------------------------------------------------------
+//
+//    #content
+//
+//------------------------------------------------------------------------------
 
 .content
 	position: relative
 	margin: -5px
 	+clr
+	+res1
+		margin: 0
 
-//------------------------------------------------------------------------------
-//
+// .content_office
+// 	margin: 0
+// 	&:before
+// 		content: ""
+// 		display: block
+// 		padding-bottom: 100%
+// 	.b
+// 		position: absolute
+// 		top: 0
+// 		left: 0
+// 		margin: 0
+// 		&:nth-of-type(1)
+// 			top: 0
+// 			left: 0
+// 		&:nth-of-type(2)
+// 			top: 0
+// 			left: 500px
+// 		&:nth-of-type(3)
+// 			top: 245px
+// 			left: 0
+// 		&:nth-of-type(4)
+// 			top: 600px
+// 			left: 0
+// 		&:nth-of-type(5)
+// 			top: 600px
+// 			left: 300px
+// 		&:nth-of-type(6)
+// 			top: 800px
+// 			left: 300px
+// 		&:nth-of-type(7)
+// 			top: 600px
+// 			left: 500px
+
 //    b - block;
 //    h - horizontal;
 //    v - vertical;
@@ -105,8 +224,6 @@
 //    lg - large;
 //
 //    example: b-h-lg
-//
-//------------------------------------------------------------------------------
 
 .b
 	position: relative
@@ -116,11 +233,20 @@
 	+box
 	overflow: hidden
 	float: left
+	+transition(0.2s linear)
 	a
 		color: #FFF
 		text-decoration: none
 		&:hover
 			text-decoration: underline
+	+res1
+		float: none
+		margin: 0
+		margin-bottom: 10px
+		&:last-child
+			margin-bottom: 5px
+	+res2
+		height: auto
 
 	&__text
 		margin: 10px 0
@@ -128,21 +254,39 @@
 	&__in-left
 		padding-right: 20px
 		margin-right: 290/690*100%
+		+box
 
 	&__in-right
-		padding-left: 20px
+		padding: 30px 20px 20px
 		width: 290/690*100%
 		position: absolute
 		top: 0
 		right: 0
 		bottom: 0
+		+box
+		background-position: 50% 50%
+		background-repeat: no-repeat
+		-webkit-background-size: cover
+		-o-background-size: cover
+		background-size: cover
+	&__in-right-marker
+		padding-top: 45px
+		padding-left: 165/250*100%
+		&:before
+			position: relative
+			left: -85px
+			top: -5px
+			content: ""
+			display: block
+			width: 100%
+			+s(marker)
 
 	&_red
 		background-color: rgba(251, 35, 37, 0.5)
 
 	&_green
 		// +g(rgba(0, 153, 15, 0.5) -25%, rgba(145, 195, 31, 0.5) 125%)
-		background-image: linear-gradient(bottom, rgba(0, 153, 15, 0.5) -25%, rgba(145, 195, 31, 0.5) 125%)
+		+g(rgba(127, 190, 29, 0.5), rgba(18, 158, 17, 0.5))
 
 	.tel
 		font-size: inherit
@@ -153,39 +297,90 @@
 		bottom: 20px
 		left: 20px
 		right: 20px
+		+res2
+			position: static
+			margin-top: 20px
 
 .b-h-sm
-	width: 490/1190*100%
-	max-width: 490px
+	// width: 490/1190*100%
+	width: 490px
 	height: 235px
+	+res1
+		width: 100%
+	&_container
+		background: none
+		height: 390px
+		padding: 0
+		position: relative
+		+res2
+			height: auto
+		.b-v
+			margin: 0 200px 0 0
+			float: left
+			width: auto
+			+res2
+				margin: 0 0 5px 0
+		.b-xs
+			margin: 0
+			position: absolute
+			top: 0
+			right: 0
+			&:last-of-type
+				top: 200px
+			+res2
+				display: inline-block
+				position: relative
+				width: 290/590*100%
+				margin: 0
+				// height: 145px
+				&:last-child
+					margin-left: -4px
+				.btn
+					position: absolute
+					bottom: 15px
+					left: 20px
+					right: 20px
 
 .b-h-md
-	width: 690/1190*100%
-	max-width: 690px
+	// width: 690/1190*100%
+	width: 690px
 	height: 235px
+	+res1
+		width: 100%
 	&.b-h-md_higher
 		height: 390px
+		+res1
+			height: auto
 
 .b-h-lg
 	width: 100%
 	max-width: 1190px
 	height: 345px
+	+res2
+		height: auto
 
 .b-v
-	width: 290/1190*100%
-	max-width: 290px
+	// width: 290/1190*100%
+	width: 290px
 	height: 390px
+	+res2
+		height: auto
 
 .b-xs
-	width: 190/1190*100%
-	max-width: 190px
+	// width: 190/1190*100%
+	width: 190px
 	height: 190px
 	padding: 15px
+	.btn
+		bottom: 15px
 
 .b-temp
 	position: absolute
 	bottom: 0
 	left: 300px
+	+res1
+		position: static
+		float: right
 
 .title
 	margin-bottom: 10px
@@ -243,216 +438,43 @@
 	&_other:before
 		+s(other)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	.ico_other
+		+res2
+			+transform(scale(0.7))
+
+
+
+
+
+//------------------------------------------------------------------------------
+//
+//    #footer
+//
+//------------------------------------------------------------------------------
+
+.footer
+	margin-top: 43px
+	padding-top: 33px
+	padding-bottom: 190px
+	position: relative
+	border-top: 2px solid rgba(255,255,255,0.2)
+	// &:before
+	// 	content: ""
+	// 	position: absolute
+	// 	top: 0
+	// 	left: -1000px
+	// 	right: -1000px
+	// 	height: 2px
+	// 	background-color: rgba(255,255,255,0.2)
+
+	&__creator
+		&_center
+			width: 100%
+			text-align: center
+
+	&__copy
+		&_floatleft
+			float: left
+			width: 0
+			white-space: nowrap
+			overflow: visible
