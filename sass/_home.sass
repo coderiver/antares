@@ -17,10 +17,14 @@ button
 
 //HOME PAGE
 .home-bg
-	background: #003d52 url(../img/home-bg.jpg) no-repeat top center
+	background-color: #003d52
+	background-image: url(../img/home-bg.jpg)
+	background-repeat: no-repeat
+	background-position: center center
 	-webkit-background-size: cover
 	-o-background-size: cover
 	background-size: cover
+	background-attachment: fixed
 .all-wrapper
 	max-width: 1190px
 	padding: 20px 5px
@@ -39,7 +43,7 @@ button
 		margin-left: 8%
 		+s(logo)
 		display: block
-.header__right
+.header-home__right
 	padding-top: 16px
 	.phone
 		+cuprum
@@ -48,6 +52,9 @@ button
 		+arial
 		+fs(14)
 		margin-left: 20px
+		text-decoration: none
+		&:hover
+			text-decoration: underline
 .nav
 	width: 98.5%
 	margin-top: 40px
@@ -97,6 +104,8 @@ button
 	text-decoration: none
 	position: absolute
 	overflow: hidden
+	+transition(0.2s linear)
+	+gpu
 	.box__heading
 		+cuprum
 		+fs(22)
@@ -187,6 +196,9 @@ button
 			line-height: 24px
 		a
 			margin-left: 15px
+			text-decoration: none
+			&:hover
+				text-decoration: underline
 		p
 			color: black
 			margin: 7px 0px
@@ -340,21 +352,23 @@ button
 		+fs(14)
 		+arial
 		line-height: 24px
+		text-decoration: none
 		&:hover
-			text-decoration: none
+			text-decoration: underline
 
-
-//FOOTER
-.footer
+//FOOTER-home
+.footer-home
 	padding-top: 15px
 	color: white
 	+fs(14)
 	+arial
 	line-height: 18px
+	margin-bottom: 40px
 	a
 		color: white
+		text-decoration: none
 		&:hover
-			text-decoration: none
+			text-decoration: underline
 	p
 		text-align: center
 		width: 87%
@@ -363,9 +377,9 @@ button
 		padding-bottom: 15px
 	span
 		line-height: 24px
-	.footer__left
+	.footer-home__left
 		float: left
-	.footer__right
+	.footer-home__right
 		float: right
 
 
@@ -378,19 +392,21 @@ button
 
 +r(1200)
 	.home-bg
-		background: url(../img/home-bg-r.jpg) no-repeat top center
+		background-image: url(../img/home-bg-r.jpg)
 	.all-wrapper
 		width: 790px
 		// height: 1181px
-	.header
+	.header-home
 		color: black
 		a
 			color: #1980bd
 		.logo
 			+s(logo-red)
 			margin-left: 20px
+		.tel
+			color: #000
 
-	.header__right
+	.header-home__right
 		padding-top: 10px
 		.phone
 			+cuprum
@@ -472,16 +488,17 @@ button
 		padding: 31px 71px 40px 72px
 		.login__heading
 			width: 100%
-	.footer
+	.footer-home
 		color: black
 		padding-top: 40px
+		margin-bottom: 25px
 		a
 			color: #1980bd
 		p
 			display: none
 		span
 			width: 390px
-		.footer__left
+		.footer-home__left
 			text-align: right
-		.footer__right
+		.footer-home__right
 			text-align: left

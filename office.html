@@ -8,8 +8,7 @@
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
-<body>
-<div class="office-bg">
+<body class="bg-office">
 <!-- BEGIN header -->
 <header class="header">
 	<div class="l">
@@ -43,15 +42,15 @@
 	<!-- END breadcrumbs -->
 
 	<!-- BEGIN content -->
-	<div class="content content_office">
+	<div class="content">
 		<div class="b b-h-sm">
 			<h3 class="title">Наши контакты</h3>
 			<p class="b__text">
 				Екатеринбург, ул. Шейнкмана, 119<br>
 				Тел <a class="tel" href="tel:+73433784848">(343) 378 48 48</a><br>
 				Эл.почта: <a href="mailto:3784848@antares-dom.ru">3784848@antares-dom.ru</a>
-				<a class="btn btn_red" href="mailto:3784848@antares-dom.ru">Написать нам</a>
 			</p>
+			<a class="btn btn_red btn_small-text" href="mailto:3784848@antares-dom.ru"><i class="btn__ico"></i>Написать нам</a>
 		</div>
 
 		<div class="b b-h-md">
@@ -60,30 +59,11 @@
 			<p class="b__text">Такие существенные условия сделки как цена и условия оплаты мы обсуждаем только в формате личной встречи: достаточно просто позвонить нам в офис, и мы договоримся об удобном месте и времени.</p>
 		</div>
 
-		<div class="b b-h-lg">
-			<img src="img/map.jpg" style="display:block;max-width:110%;margin:-20px">
+		<div class="b b-h-lg b_map">
+			<div id="YMapsID" style="width:100%;height:100%"></div>
 		</div>
 
-		<div class="b b-h-sm b-h-sm_container">
-			<div class="b b-v b_green">
-				<h3 class="title">Покупка</h3>
-				<p>Мы всегда стремимся согласовать схемы оплаты с возможностями и пожеланиями каждого покупателя, и именно поэтому, наряду со стандартными схемами расчетов, мы оказываем эффективное содействие в организации ипотечной сделки.</p>
-				<a class="btn" href="#">Условия ипотеки</a>
-			</div>
-
-			<div class="b b-xs b_green">
-				<h3 class="title title_xs">Финансовый партнер</h3>
-				<div class="ico ico_partner"></div>
-				<a class="btn" href="#">Условия</a>
-			</div>
-
-			<div class="b b-xs b_green">
-				<h3 class="title title_xs">Другие<br>банки</h3>
-				<div class="ico ico_other"></div>
-			</div>
-		</div>
-
-		<!-- <div class="b b-v b_green">
+		<div class="b b-v b_green">
 			<h3 class="title">Покупка</h3>
 			<p>Мы всегда стремимся согласовать схемы оплаты с возможностями и пожеланиями каждого покупателя, и именно поэтому, наряду со стандартными схемами расчетов, мы оказываем эффективное содействие в организации ипотечной сделки.</p>
 			<a class="btn" href="#">Условия ипотеки</a>
@@ -98,7 +78,7 @@
 		<div class="b b-xs b_green b-temp">
 			<h3 class="title title_xs">Другие<br>банки</h3>
 			<div class="ico ico_other"></div>
-		</div> -->
+		</div>
 
 		<div class="b b-h-md b-h-md_higher b_red">
 			<div class="b__in-left">
@@ -109,7 +89,8 @@
 			<div class="b__in-right" style="background-image:url('img/b-right-background.jpg')">
 				<h3 class="title title_xs">правовое<br>обеспечение</h3>
 				<div class="b__in-right-marker"><a href="#">Вторая<br>высотка</a></div>
-				<a class="btn btn_red" href="#">Посмотреть</a>
+				<a class="btn btn_visible-on-mobile btn_small-text" href="#">Вторая высотка</a>
+				<a class="btn btn_red btn_not-visible-on-mobile" href="#">Посмотреть</a>
 			</div>
 		</div>
 	</div>
@@ -126,7 +107,47 @@
 	</div>
 </footer>
 <!-- END footer -->
-</div>
+
+<!-- BEGIN bg-for-mobile -->
+<div class="bg-for-mobile bg-for-mobile_office"></div>
+<!-- END bg-for-mobile -->
+
+<!-- BEGIN yandex map -->
+<script src='http://api-maps.yandex.ru/2.1/?lang=ru_RU'></script>
+<script>
+	ymaps.ready(init);
+
+	function init (){
+		var myMap = new ymaps.Map("YMapsID", {
+			center: [56.820675, 60.59138],
+			zoom: 14
+		});
+
+		arr = [
+			{a:'Екатеринбург, ул. Шейнкмана, 119',
+			 b:"«Антарес»",
+			 c:'Екатеринбург, ул. Шейнкмана, 119'}
+		];
+
+		i = 0;
+
+		while(i<arr.length){
+			objects = ymaps.geoQuery(ymaps.geocode(arr[i].a)).setOptions({
+				iconLayout: 'default#image',
+				iconImageHref: '/img/baloon.png',
+				iconImageSize: [64, 81],
+				iconImageOffset: [-32, -80],
+				balloonContentSize: [270, 99]
+			}).setProperties({
+				balloonContentHeader:arr[i].b,
+				balloonContentBody: arr[i].c
+			}).addToMap(myMap);
+			i++;
+		}
+	}
+</script>
+<!-- END yandex map -->
+
 <!-- load scripts -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>
