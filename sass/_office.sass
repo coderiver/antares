@@ -252,6 +252,7 @@
 				width: 145px
 				height: 145px
 				margin-right: 5px
+				padding: 20px 10px
 				.btn
 					position: absolute
 					top: 0
@@ -265,7 +266,7 @@
 				float: left
 				width: 145px
 				height: 145px
-
+				padding: 20px 10px
 
 
 //    b - block;
@@ -444,13 +445,13 @@
 	.btn
 		bottom: 15px
 
-.b-temp
-	position: absolute
-	bottom: 0
-	left: 300px
-	+res1
-		position: static
-		float: right
+// .b-temp
+// 	position: absolute
+// 	bottom: 0
+// 	left: 300px
+// 	+res1
+// 		position: static
+// 		float: right
 
 .title
 	margin-bottom: 10px
@@ -481,7 +482,7 @@
 		display: none
 		+s(send-email)
 		position: relative
-		top: 2px
+		top: 3px
 		margin-right: 15px
 		+res2
 			display: inline-block
@@ -529,6 +530,8 @@
 		+s(partner)
 	&_other:before
 		+s(other)
+		+res2
+			+s(other-small)
 
 	.ico_other
 		+res2
