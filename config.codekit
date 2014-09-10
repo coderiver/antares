@@ -238,13 +238,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/icons-s82a9d09ae3.png": {
+	"\/img\/icons-sfde6b85b65.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 0,
-		"inputAbbreviatedPath": "\/img\/icons-s82a9d09ae3.png",
-		"outputAbbreviatedPath": "\/img\/icons-s82a9d09ae3.png",
+		"inputAbbreviatedPath": "\/img\/icons-sfde6b85b65.png",
+		"outputAbbreviatedPath": "\/img\/icons-sfde6b85b65.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -443,6 +443,17 @@
 		"initialSize": 1340,
 		"inputAbbreviatedPath": "\/img\/icons\/other.png",
 		"outputAbbreviatedPath": "\/img\/icons\/other.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/partner-big.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 13658,
+		"inputAbbreviatedPath": "\/img\/icons\/partner-big.png",
+		"outputAbbreviatedPath": "\/img\/icons\/partner-big.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

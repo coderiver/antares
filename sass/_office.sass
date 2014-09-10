@@ -21,7 +21,7 @@
 	padding: 46px 0 33px
 	text-align: right
 	border-bottom: 2px solid rgba(255,255,255,0.2)
-	+res1
+	+res2
 		padding: 25px 0
 	// &:before
 	// 	content: ""
@@ -41,10 +41,10 @@
 		.tel
 			margin-right: 20px
 			text-decoration: none
-			+res1
+			+res2
 				+fs(15)
 				margin-right: 70px
-		+res1
+		+res2
 			a:not(.tel), span, p, div
 				display: none
 
@@ -59,7 +59,7 @@
 				margin-right: 0
 		a
 			+fs(18)
-		+res1
+		+res2
 			display: none
 			position: absolute
 			z-index: 100
@@ -94,15 +94,16 @@
 		position: absolute
 		top: -33px
 		left: 21px
-		+res1
+		+res2
 			top: -19px
+			left: 15px
 
 .logo-office
 	display: inline-block
 	text-decoration: none
 	+hide-text
 	+s(logo)
-	+res1
+	+res2
 		+sr(logo)
 
 .menu-btn
@@ -122,7 +123,7 @@
 		display: inline-block
 		vertical-align: middle
 		+s(menu-btn)
-	+res1
+	+res2
 		display: block
 
 .tel
@@ -135,18 +136,18 @@
 	position: relative
 	display: inline-block
 	font-size: 0
-	margin: 20px 0 18px
+	margin: 20px 0 18px 20px
 	&:before
-		display: none
+		display: block
 		content: "←"
 		position: absolute
 		+fs(15)
 		color: #FFF
 		top: 0px
 		left: -19px
-	&:hover
-		&:before
-			display: block
+	// &:hover
+	// 	&:before
+	// 		display: block
 	li
 		display: inline-block
 		vertical-align: middle
@@ -164,10 +165,10 @@
 			text-decoration: none
 			&:hover
 				text-decoration: underline
-	+res2
-		margin-left: 20px
-		&:before
-			display: block
+	// +res2
+	// 	margin-left: 20px
+	// 	&:before
+	// 		display: block
 
 
 
@@ -182,6 +183,8 @@
 	position: relative
 	// margin: -5px
 	height: 990px
+	+res1
+		height: 1335px
 	+res2
 		margin: 0
 		height: auto
@@ -213,6 +216,38 @@
 		&:nth-of-type(7)
 			top: 600px
 			left: 500px
+
+
+		//
+		+res1
+			&:nth-of-type(1)
+				width: 290px
+				height: 270px
+			&:nth-of-type(2)
+				left: 300px
+				width: 490px
+				height: 270px
+			&:nth-of-type(3)
+				top: 280px
+			&:nth-of-type(4)
+				top: 635px
+				width: 390px
+				height: 300px
+			&:nth-of-type(5)
+				top: 635px
+				left: 400px
+				height: 300px
+				padding: 20px
+			&:nth-of-type(6)
+				top: 635px
+				left: 600px
+				height: 300px
+				padding: 20px
+			&:nth-of-type(7)
+				left: 0
+				width: 790px
+				top: 945px
+
 
 		// mobile version
 		+res2
@@ -307,7 +342,7 @@
 
 	&__in-left
 		padding-right: 20px
-		margin-right: 290/690*100%
+		margin-right: 270px
 		+box
 		+res2
 			padding: 10px 20px
@@ -316,7 +351,7 @@
 
 	&__in-right
 		padding: 30px 20px 20px
-		width: 290/690*100%
+		width: 290px
 		position: absolute
 		top: 0
 		right: 0
@@ -442,8 +477,17 @@
 	width: 190px
 	height: 190px
 	padding: 15px
+	& > a:not(.btn)
+		position: absolute
+		z-index: 10
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
 	.btn
 		bottom: 15px
+		+res1
+			bottom: 20px
 
 // .b-temp
 // 	position: absolute
@@ -464,6 +508,12 @@
 		text-align: center
 		text-transform: uppercase
 		line-height: 1.18
+		+res1
+			margin: 15px 0 30px
+		+res2
+			margin: 0 0 10px 0
+	+res1
+		+cuprum
 	+res2
 		line-height: 1
 
@@ -482,10 +532,13 @@
 		display: none
 		+s(send-email)
 		position: relative
-		top: 3px
+		top: 0
 		margin-right: 15px
+		+res1
+			display: inline-block
 		+res2
 			display: inline-block
+			top: 3px
 
 	&_red
 		background-color: #DE1840
@@ -528,14 +581,15 @@
 		+transform(rotate(32deg))
 	&_partner:before
 		+s(partner)
+		+res1
+			+s(partner-big)
+		+res2
+			+s(partner)
 	&_other:before
 		+s(other)
 		+res2
 			+s(other-small)
 
-	.ico_other
-		+res2
-			+transform(scale(0.7))
 
 
 
@@ -571,6 +625,10 @@
 		&_center
 			width: 100%
 			text-align: center
+			+res1
+				text-align: right
+			+res2
+				text-align: center
 
 	&__copy
 		&_floatleft
@@ -578,7 +636,7 @@
 			width: 0
 			white-space: nowrap
 			overflow: visible
-			+res1
+			+res2
 				float: none
 				width: 100%
 				text-align: center
