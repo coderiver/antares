@@ -238,7 +238,7 @@ button:active { position: relative; top: 1px; }
   .content .b:nth-child(5) .btn { position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: auto; margin: 0; opacity: 0; }
   .content .b:nth-child(6) { float: left; width: 145px; height: 145px; padding: 20px 10px; } }
 
-.b { position: relative; padding: 20px; margin: 5px; background: #0F0F0F; background: rgba(0, 0, 0, 0.4); -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; overflow: hidden; -moz-transition: linear 0.2s; -o-transition: linear 0.2s; -webkit-transition: linear 0.2s; transition: linear 0.2s; }
+.b { position: relative; padding: 20px; margin: 5px; background: #235255; background: rgba(0, 0, 0, 0.4); -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; overflow: hidden; -moz-transition: linear 0.2s; -o-transition: linear 0.2s; -webkit-transition: linear 0.2s; transition: linear 0.2s; }
 .b a { color: #FFF; text-decoration: none; }
 .b a:hover { text-decoration: underline; }
 .b__text { margin: 10px 0; }
@@ -277,7 +277,7 @@ button:active { position: relative; top: 1px; }
 @media only screen and (max-width: 1230px) { .title { font-family: "Cuprum-Regular"; font-weight: normal; } }
 @media only screen and (max-width: 700px) { .title { line-height: 1; } }
 
-.btn { display: block; height: 40px; line-height: 40px; text-align: center; font-size: 24px; font-size: 2.4rem; text-decoration: none; background: #0F0F0F; background: rgba(0, 0, 0, 0.5); }
+.btn { display: block; height: 40px; line-height: 40px; text-align: center; font-size: 24px; font-size: 2.4rem; text-decoration: none; background: #0e3d1f; background: rgba(0, 0, 0, 0.5); }
 .btn:hover { text-decoration: none !important; opacity: 0.9; }
 .btn__ico { display: none; background: url('../img/icons-sfde6b85b65.png') 0 -1006px no-repeat; width: 26px; height: 19px; position: relative; top: 0; margin-right: 15px; }
 @media only screen and (max-width: 1230px) { .btn__ico { display: inline-block; } }
