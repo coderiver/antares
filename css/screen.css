@@ -211,32 +211,32 @@ button:active { position: relative; top: 1px; }
 .breadcrumbs li a:hover { text-decoration: underline; }
 
 .content { position: relative; height: 990px; }
-@media only screen and (max-width: 1230px) { .content { height: 1335px; } }
-@media only screen and (max-width: 700px) { .content { margin: 0; height: auto; } }
 .content .b { position: absolute; z-index: 1; top: 0; left: 0; margin: 0; }
-.content .b:nth-child(1) { top: 0; left: 0; }
-.content .b:nth-child(2) { top: 0; left: 500px; }
-.content .b:nth-child(3) { top: 245px; left: 0; }
-.content .b:nth-child(4) { top: 600px; left: 0; }
-.content .b:nth-child(5) { top: 600px; left: 300px; }
-.content .b:nth-child(6) { top: 800px; left: 300px; }
-.content .b:nth-child(7) { top: 600px; left: 500px; }
-@media only screen and (max-width: 1230px) { .content .b:nth-child(1) { width: 290px; height: 270px; }
-  .content .b:nth-child(2) { left: 300px; width: 490px; height: 270px; }
-  .content .b:nth-child(3) { top: 280px; }
-  .content .b:nth-child(4) { top: 635px; width: 390px; height: 300px; }
-  .content .b:nth-child(5) { top: 635px; left: 400px; height: 300px; padding: 20px; }
-  .content .b:nth-child(6) { top: 635px; left: 600px; height: 300px; padding: 20px; }
-  .content .b:nth-child(7) { left: 0; width: 790px; top: 945px; } }
-@media only screen and (max-width: 700px) { .content .b:nth-child(n) { position: relative; top: 0; left: 0; padding: 10px 20px; margin-bottom: 5px; width: 100%; height: auto; }
-  .content .b:nth-child(n) .btn { position: relative; top: 0; left: 0; bottom: 0; right: 0; margin: 20px -10px 0 -10px; height: 50px; line-height: 50px; }
+.content .b1 { top: 0; left: 0; }
+.content .b2 { top: 0; left: 500px; }
+.content .b3 { top: 245px; left: 0; }
+.content .b4 { top: 600px; left: 0; }
+.content .b5 { top: 600px; left: 300px; }
+.content .b6 { top: 800px; left: 300px; }
+.content .b7 { top: 600px; left: 500px; }
+@media only screen and (max-width: 1230px) { .content { height: 1335px; }
+  .content .b1 { width: 290px; height: 270px; }
+  .content .b2 { left: 300px; width: 490px; height: 270px; }
+  .content .b3 { top: 280px; }
+  .content .b4 { top: 635px; width: 390px; height: 300px; }
+  .content .b5 { top: 635px; left: 400px; height: 300px; padding: 20px; }
+  .content .b6 { top: 635px; left: 600px; height: 300px; padding: 20px; }
+  .content .b7 { left: 0; width: 790px; top: 945px; } }
+@media only screen and (max-width: 700px) { .content { margin: 0; height: auto; }
+  .content .b { position: relative; top: 0; left: 0; padding: 10px 20px; margin-bottom: 5px; width: 100%; height: auto; }
+  .content .b .btn { position: relative; top: 0; left: 0; bottom: 0; right: 0; margin: 20px -10px 0 -10px; height: 50px; line-height: 50px; }
   .content .b:last-child { margin-bottom: 0; }
-  .content .b:nth-child(3) { height: 170px; }
-  .content .b:nth-child(7) { padding: 0; background: none; }
-  .content .b:nth-child(7) .btn { position: absolute; bottom: 10px; left: 10px; right: 10px; top: auto; margin: 0; }
-  .content .b:nth-child(5) { float: left; width: 145px; height: 145px; margin-right: 5px; padding: 20px 10px; }
-  .content .b:nth-child(5) .btn { position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: auto; margin: 0; opacity: 0; }
-  .content .b:nth-child(6) { float: left; width: 145px; height: 145px; padding: 20px 10px; } }
+  .content .b3 { height: 170px; }
+  .content .b7 { padding: 0; background: none; }
+  .content .b7 .btn { position: absolute; bottom: 10px; left: 10px; right: 10px; top: auto; margin: 0; }
+  .content .b5 { float: left; width: 145px; height: 145px; margin-right: 5px; padding: 20px 10px; }
+  .content .b5 .btn { position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: auto; margin: 0; opacity: 0; }
+  .content .b6 { float: left; width: 145px; height: 145px; padding: 20px 10px; } }
 
 .b { position: relative; padding: 20px; margin: 5px; background: #235255; background: rgba(0, 0, 0, 0.4); -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; overflow: hidden; -moz-transition: linear 0.2s; -o-transition: linear 0.2s; -webkit-transition: linear 0.2s; transition: linear 0.2s; }
 .b a { color: #FFF; text-decoration: none; }
@@ -257,18 +257,20 @@ button:active { position: relative; top: 1px; }
 .b .tel { font-size: inherit; }
 .b .btn { position: absolute; z-index: 3; bottom: 20px; left: 20px; right: 20px; top: auto; }
 
-.b-h-sm { width: 490px; height: 235px; }
+.b1 { width: 490px; height: 235px; }
 
-.b-h-md { width: 690px; height: 235px; }
-.b-h-md.b-h-md_higher { height: 390px; }
+.b2 { width: 690px; height: 235px; }
+.b2.b-h-md_higher { height: 390px; }
 
-.b-h-lg { width: 100%; max-width: 1190px; height: 345px; }
+.b3 { width: 100%; max-width: 1190px; height: 345px; }
 
-.b-v { width: 290px; height: 390px; }
+.b4 { width: 290px; height: 390px; }
 
-.b-xs { display: block; text-decoration: none; width: 190px; height: 190px; padding: 15px; }
-.b-xs .btn { bottom: 15px; }
-@media only screen and (max-width: 1230px) { .b-xs .btn { bottom: 20px; } }
+.b5, .b6 { display: block; text-decoration: none; width: 190px; height: 190px; padding: 15px; }
+.b5 .btn, .b6 .btn { bottom: 15px; }
+@media only screen and (max-width: 1230px) { .b5 .btn, .b6 .btn { bottom: 20px; } }
+
+.b7 { width: 690px; height: 390px; }
 
 .title { margin-bottom: 10px; color: #fefefe; font-family: "Cuprum-Bold"; font-weight: normal; font-size: 40px; font-size: 4rem; }
 .title_xs { font-size: 22px; font-size: 2.2rem; font-family: "Cuprum-Regular"; font-weight: normal; text-align: center; text-transform: uppercase; line-height: 1.18; }

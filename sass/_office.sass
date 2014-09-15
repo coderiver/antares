@@ -175,11 +175,6 @@
 	position: relative
 	// margin: -5px
 	height: 990px
-	+res1
-		height: 1335px
-	+res2
-		margin: 0
-		height: auto
 
 	.b
 		position: absolute
@@ -187,113 +182,115 @@
 		top: 0
 		left: 0
 		margin: 0
-		&:nth-child(1)
+	.b1
+		top: 0
+		left: 0
+	.b2
+		top: 0
+		left: 500px
+	.b3
+		top: 245px
+		left: 0
+	.b4
+		top: 600px
+		left: 0
+	.b5
+		top: 600px
+		left: 300px
+	.b6
+		top: 800px
+		left: 300px
+	.b7
+		top: 600px
+		left: 500px
+
+
+	//
+	+res1
+		height: 1335px
+		.b1
+			width: 290px
+			height: 270px
+		.b2
+			left: 300px
+			width: 490px
+			height: 270px
+		.b3
+			top: 280px
+		.b4
+			top: 635px
+			width: 390px
+			height: 300px
+		.b5
+			top: 635px
+			left: 400px
+			height: 300px
+			padding: 20px
+		.b6
+			top: 635px
+			left: 600px
+			height: 300px
+			padding: 20px
+		.b7
+			left: 0
+			width: 790px
+			top: 945px
+
+	// mobile version
+	+res2
+		margin: 0
+		height: auto
+		.b
+			position: relative
 			top: 0
 			left: 0
-		&:nth-child(2)
-			top: 0
-			left: 500px
-		&:nth-child(3)
-			top: 245px
-			left: 0
-		&:nth-child(4)
-			top: 600px
-			left: 0
-		&:nth-child(5)
-			top: 600px
-			left: 300px
-		&:nth-child(6)
-			top: 800px
-			left: 300px
-		&:nth-child(7)
-			top: 600px
-			left: 500px
-
-
-		//
-		+res1
-			&:nth-child(1)
-				width: 290px
-				height: 270px
-			&:nth-child(2)
-				left: 300px
-				width: 490px
-				height: 270px
-			&:nth-child(3)
-				top: 280px
-			&:nth-child(4)
-				top: 635px
-				width: 390px
-				height: 300px
-			&:nth-child(5)
-				top: 635px
-				left: 400px
-				height: 300px
-				padding: 20px
-			&:nth-child(6)
-				top: 635px
-				left: 600px
-				height: 300px
-				padding: 20px
-			&:nth-child(7)
-				left: 0
-				width: 790px
-				top: 945px
-
-
-		// mobile version
-		+res2
-			&:nth-child(n)
+			padding: 10px 20px
+			margin-bottom: 5px
+			width: 100%
+			height: auto
+			.btn
 				position: relative
 				top: 0
 				left: 0
-				padding: 10px 20px
-				margin-bottom: 5px
-				width: 100%
-				height: auto
-				.btn
-					position: relative
-					top: 0
-					left: 0
-					bottom: 0
-					right: 0
-					margin: 20px -10px 0 -10px
-					height: 50px
-					line-height: 50px
+				bottom: 0
+				right: 0
+				margin: 20px -10px 0 -10px
+				height: 50px
+				line-height: 50px
 			&:last-child
 				margin-bottom: 0
-			&:nth-child(3)
-				height: 170px
-			&:nth-child(7)
-				padding: 0
-				background: none
-				.btn
-					position: absolute
-					bottom: 10px
-					left: 10px
-					right: 10px
-					top: auto
-					margin: 0
-			&:nth-child(5)
-				float: left
-				width: 145px
-				height: 145px
-				margin-right: 5px
-				padding: 20px 10px
-				.btn
-					position: absolute
-					top: 0
-					left: 0
-					right: 0
-					bottom: 0
-					height: auto
-					margin: 0
-					opacity: 0
-			&:nth-child(6)
-				float: left
-				width: 145px
-				height: 145px
-				padding: 20px 10px
+		.b3
+			height: 170px
+		.b7
+			padding: 0
+			background: none
+			.btn
+				position: absolute
+				bottom: 10px
+				left: 10px
+				right: 10px
+				top: auto
+				margin: 0
+		.b5
+			float: left
+			width: 145px
+			height: 145px
+			margin-right: 5px
+			padding: 20px 10px
+			.btn
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				height: auto
+				margin: 0
+				opacity: 0
+		.b6
+			float: left
+			width: 145px
+			height: 145px
+			padding: 20px 10px
 
 
 //    b - block;
@@ -402,29 +399,34 @@
 		right: 20px
 		top: auto
 
-.b-h-sm
+// .b-h-sm
+.b1
 	// width: 490/1190*100%
 	width: 490px
 	height: 235px
 
-.b-h-md
+// .b-h-md
+.b2
 	// width: 690/1190*100%
 	width: 690px
 	height: 235px
 	&.b-h-md_higher
 		height: 390px
 
-.b-h-lg
+// .b-h-lg
+.b3
 	width: 100%
 	max-width: 1190px
 	height: 345px
 
-.b-v
+// .b-v
+.b4
 	// width: 290/1190*100%
 	width: 290px
 	height: 390px
 
-.b-xs
+// .b-xs
+.b5, .b6
 	// width: 190/1190*100%
 	display: block
 	text-decoration: none
@@ -435,6 +437,10 @@
 		bottom: 15px
 		+res1
 			bottom: 20px
+.b7
+	// width: 690/1190*100%
+	width: 690px
+	height: 390px
 
 .title
 	margin-bottom: 10px
